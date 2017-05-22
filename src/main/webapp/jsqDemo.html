@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	alert("开始计算吧");
+	function pf(){
+		var inValue=document.getElementById("num").value;
+		console.log(inValue);
+		var span=document.getElementById("result");
+		//判断用户输入计算的值是不是数字
+		if(isNaN(inValue)){
+			//不是数字，将提示内容写入span里面
+			span.innerHTML="请输入数字";
+		}else{
+			//是数字，计算平方并将结果写入span
+			span.innerHTML=inValue*inValue;
+			
+		}
+		
+	}
+	document.onkeydown=function(event){
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if(e && e.keyCode==27){ // 按 Esc 
+            //要做的事情
+          }
+        if(e && e.keyCode==113){ // 按 F2 
+             //要做的事情
+           }            
+         if(e && e.keyCode==13){ // enter 键
+             //要做的事情
+             pf();
+        }
+    }; 
+</script>
+</head>
+<body>
+	<input type="text" id="num"/>
+	<input type="button" value="计算pf" onclick="pf()"/>
+	=<span id="result"></span>
+</body>
+</html>

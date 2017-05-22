@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.class_2{
+		width:100px;
+		height:100px;
+		background-color:blue;
+	}
+	.class_1{
+		background-color:red;
+		width:200px;
+		height:200px;
+	}
+</style>
+	<script>
+	function change(){
+		document.getElementById("ii").setAttribute("class","class_1");
+	}
+	function attribute(){
+		document.write(document.getElementById("ii").getAttribute("class_1"));
+	}
+	function delete3(){
+		var obj=document.getElementById("iii");
+		obj.parentNode.removeChild(obj);
+	}
+</script>
+</head>
+<body>
+	<div id="ii" class="class_1" onclick="change()">
+		<div id="iii" class="class_2" onclick="delete3()"></div>
+	</div>
+
+</body>
+
+</html>
